@@ -88,16 +88,17 @@ const HeroSection = () => {
     <section ref={sectionRef} className="relative h-screen w-full overflow-hidden bg-black">
       {/* Video background */}
       <video
-        ref={videoRef}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        className="absolute inset-0 h-full w-full object-cover"
-      >
-        <source src="/intro.mp4" type="video/mp4" />
-      </video>
+  ref={videoRef}
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
+  className="absolute inset-0 h-full w-full object-cover"
+>
+  {/* Added the repository name to the path */}
+  <source src="/elumalai-portfolio/intro.mp4" type="video/mp4" />
+</video>
 
       {/* Cinematic gradient overlays targeting warm orange accent balances */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent" />
