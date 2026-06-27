@@ -22,7 +22,7 @@ const AboutSection = () => {
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-[#ff7a00] to-[#00ffcc] rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
             <img
-              src="elu.jpeg"
+              src="/elu.jpeg"
               alt="S. Elumalai"
               className="relative w-full h-[500px] object-cover rounded-2xl shadow-2xl animate-float"
               draggable={false}
