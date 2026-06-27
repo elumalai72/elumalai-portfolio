@@ -11,28 +11,28 @@ interface ContactMethod {
 const CONTACT_METHODS: ContactMethod[] = [
   {
     icon: Mail,
-    label: 'Email',
-    value: 'goyalharsh642@gmail.com',
-    href: 'mailto:goyalharsh642@gmail.com',
+    label: 'Gmail',
+    value: 'ft.elumalai@gmail.com',
+    href: 'mailto:ft.elumalai@gmail.com',
   },
   {
     icon: MessageCircle,
     label: 'WhatsApp',
-    value: '+91 81682 94032',
+    value: '+91 7032973152',
     // wa.me requires digits only — no +, no spaces, no hyphens
-    href: 'https://wa.me/918168294032',
+    href: 'https://wa.me/7032973152',
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    value: 'in/harsh-goyal-7900b2256',
-    href: 'https://www.linkedin.com/in/harsh-goyal-7900b2256/',
+    value: 'Connect',
+    href: 'https://www.linkedin.com/in/s-elumalai-63bb392a3?utm_source=share_via&utm_content=profile&utm_medium=member_android',
   },
   {
     icon: Github,
     label: 'GitHub',
-    value: '@harshgoyal27',
-    href: 'https://github.com/harshgoyal27',
+    value: 'View Code',
+    href: 'https://github.com/elumalai72',
   },
 ];
 
@@ -40,15 +40,15 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="relative w-full bg-[#0C0C0C] px-5 sm:px-8 md:px-10 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20"
+      className="relative w-full bg-[#060608] px-5 sm:px-8 md:px-10 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20"
     >
       {/* Heading */}
       <FadeIn y={40}>
         <h2
-          className="hero-heading text-center font-black uppercase tracking-tight leading-none mb-4"
+          className="hero-heading text-center font-black uppercase tracking-tight leading-none mb-4 text-white"
           style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
         >
-          Get in touch
+          Let's Connect
         </h2>
       </FadeIn>
 
@@ -57,12 +57,12 @@ const ContactSection = () => {
           className="text-center font-light uppercase tracking-widest text-[#D7E2EA]/60 mb-12 sm:mb-16 md:mb-20"
           style={{ fontSize: 'clamp(0.85rem, 1.4vw, 1.1rem)' }}
         >
-          Pick whichever channel suits you
+          Open to collaborations, partnerships, and innovative projects
         </p>
       </FadeIn>
 
       {/* Contact cards */}
-          <div className="mx-auto grid max-w-5xl grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
+      <div className="mx-auto grid max-w-5xl grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
         {CONTACT_METHODS.map((method, i) => {
           const Icon = method.icon;
           const isExternal = method.href.startsWith('http');
@@ -73,18 +73,18 @@ const ContactSection = () => {
                 href={method.href}
                 target={isExternal ? '_blank' : undefined}
                 rel={isExternal ? 'noopener noreferrer' : undefined}
-                className="group relative flex h-full flex-col justify-between gap-8 sm:gap-10 rounded-[28px] sm:rounded-[32px] border-2 border-[#D7E2EA]/20 bg-[#141418] p-6 sm:p-7 md:p-8 transition-all duration-300 hover:border-[#D7E2EA]/60 hover:bg-[#1a1a20] hover:-translate-y-1"
+                className="group relative flex h-full flex-col justify-between gap-8 sm:gap-10 rounded-[28px] sm:rounded-[32px] border-2 border-[#D7E2EA]/10 bg-[#0d0d11] p-6 sm:p-7 md:p-8 transition-all duration-300 hover:border-[#ff7a00]/40 hover:bg-[#121217] hover:-translate-y-1"
               >
                 <div className="flex items-start justify-between">
-                  <div className="rounded-full border border-[#D7E2EA]/20 p-3 sm:p-3.5 transition-colors duration-300 group-hover:border-[#D7E2EA]/50">
+                  <div className="rounded-full border border-[#D7E2EA]/10 p-3 sm:p-3.5 transition-colors duration-300 group-hover:border-[#ff7a00]/40">
                     <Icon
-                      className="text-[#D7E2EA]"
+                      className="text-[#D7E2EA] group-hover:text-[#ff7a00] transition-colors"
                       size={22}
                       strokeWidth={1.5}
                     />
                   </div>
                   <ArrowUpRight
-                    className="text-[#D7E2EA]/40 transition-all duration-300 group-hover:text-[#D7E2EA] group-hover:rotate-12"
+                    className="text-[#D7E2EA]/40 transition-all duration-300 group-hover:text-[#ff7a00] group-hover:rotate-12"
                     size={22}
                     strokeWidth={1.5}
                   />
@@ -98,7 +98,7 @@ const ContactSection = () => {
                     {method.label}
                   </span>
                   <span
-                    className="font-medium text-[#D7E2EA] break-all"
+                    className="font-medium text-[#D7E2EA] break-all group-hover:text-white transition-colors"
                     style={{ fontSize: 'clamp(1rem, 1.8vw, 1.4rem)' }}
                   >
                     {method.value}
@@ -117,13 +117,13 @@ const ContactSection = () => {
             className="font-light uppercase tracking-widest text-[#D7E2EA]/50"
             style={{ fontSize: 'clamp(0.7rem, 1.1vw, 0.9rem)' }}
           >
-            © 2026 Harsh Goyal
+            © 2026 S. Elumalai — AI Engineer · Entrepreneur · Technology Builder
           </span>
           <span
-            className="font-light uppercase tracking-widest text-[#D7E2EA]/50"
+            className="font-light uppercase tracking-widest text-[#D7E2EA]/40"
             style={{ fontSize: 'clamp(0.7rem, 1.1vw, 0.9rem)' }}
           >
-            Designed & built in Delhi
+            Portfolio 2026
           </span>
         </div>
       </FadeIn>

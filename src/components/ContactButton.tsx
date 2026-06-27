@@ -15,14 +15,14 @@ const ContactButton = ({
     <a
       href={href}
       onClick={onClick}
-      className={`inline-flex items-center justify-center rounded-full px-8 py-3 sm:px-10 sm:py-3.5 md:px-12 md:py-4 text-xs sm:text-sm md:text-base font-medium uppercase tracking-widest text-white whitespace-nowrap transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] ${className}`}
+      className={`inline-flex items-center justify-center rounded-full px-8 py-3 sm:px-10 sm:py-3.5 md:px-12 md:py-4 text-xs sm:text-sm md:text-base font-medium uppercase tracking-widest text-white whitespace-nowrap transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${className}`}
       style={{
         background:
-          'linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%)',
+          'linear-gradient(123deg, #0d0d11 7%, #ff7a00 50%, #b85400 72%, #060608 100%)',
         boxShadow:
-          '0px 4px 4px rgba(181, 1, 167, 0.25), 4px 4px 12px #7721B1 inset',
-        outline: '2px solid #FFFFFF',
-        outlineOffset: '-3px',
+          '0px 8px 24px rgba(255, 122, 0, 0.2), 0px 4px 12px rgba(255, 122, 0, 0.15) inset',
+        outline: '1px solid rgba(255, 255, 255, 0.4)',
+        outlineOffset: '-4px',
       }}
     >
       {label}

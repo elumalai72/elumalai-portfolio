@@ -19,14 +19,24 @@ interface CharProps {
 const Char = ({ char, index, total, progress }: CharProps) => {
   const start = index / total;
   const end = start + 1 / total;
+  
+  // Base background opacity for unread text
   const opacity = useTransform(progress, [start, end], [0.2, 1]);
+  
+  // Subtle text-color shift to a premium orange hue during scroll activation
+  const color = useTransform(
+    progress, 
+    [start, start + (end - start) * 0.5, end], 
+    ['rgba(215, 226, 234, 0.8)', '#ff7a00', '#ffffff']
+  );
 
   return (
     <span style={{ position: 'relative', display: 'inline-block' }}>
-      <span style={{ opacity: 0.2 }}>{char}</span>
+      <span style={{ opacity: 0.15 }}>{char}</span>
       <motion.span
         style={{
           opacity,
+          color,
           position: 'absolute',
           left: 0,
           top: 0,
@@ -45,10 +55,9 @@ const AnimatedText = ({ text, className, style }: AnimatedTextProps) => {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start 0.8', 'end 0.2'],
+    offset: ['start 0.85', 'end 0.25'],
   });
 
-  // Split into words to preserve natural line-wrapping at word boundaries.
   const words = text.split(' ');
   const totalChars = text.length;
   let runningIndex = 0;
@@ -58,7 +67,7 @@ const AnimatedText = ({ text, className, style }: AnimatedTextProps) => {
       {words.map((word, wi) => {
         const wordChars = Array.from(word);
         const wordStart = runningIndex;
-        runningIndex += wordChars.length + 1; // +1 accounts for the space after
+        runningIndex += wordChars.length + 1;
 
         return (
           <span

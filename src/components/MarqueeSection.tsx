@@ -1,31 +1,23 @@
 import { useEffect, useRef, useState } from 'react';
 
+// Upgraded imagery pool matching AI systems, connected nodes, circuits, and advanced engineering visuals
 const IMAGES = [
-  'https://motionsites.ai/assets/hero-space-voyage-preview-eECLH3Yc.gif',
-  'https://motionsites.ai/assets/hero-codenest-preview-Cgppc2qV.gif',
-  'https://motionsites.ai/assets/hero-vex-ventures-preview-BczMFIiw.gif',
-  'https://motionsites.ai/assets/hero-stellar-ai-v2-preview-DjvxjG3C.gif',
-  'https://motionsites.ai/assets/hero-asme-preview-B_nGDnTP.gif',
-  'https://motionsites.ai/assets/hero-transform-data-preview-Cx5OU29N.gif',
-  'https://motionsites.ai/assets/hero-vitara-preview-Cjz2QYyU.gif',
-  'https://motionsites.ai/assets/hero-terra-preview-BFjrCr7T.gif',
-  'https://motionsites.ai/assets/hero-skyelite-preview-DHaZIgUv.gif',
-  'https://motionsites.ai/assets/hero-aethera-preview-DknSlcTa.gif',
-  'https://motionsites.ai/assets/hero-designpro-preview-D8c5_een.gif',
-  'https://motionsites.ai/assets/hero-stellar-ai-preview-D3HL6bw1.gif',
-  'https://motionsites.ai/assets/hero-xportfolio-preview-D4A8maiC.gif',
-  'https://motionsites.ai/assets/hero-orbit-web3-preview-BXt4OttD.gif',
-  'https://motionsites.ai/assets/hero-nexora-preview-cx5HmUgo.gif',
-  'https://motionsites.ai/assets/hero-evr-ventures-preview-DZxeVFEX.gif',
-  'https://motionsites.ai/assets/hero-planet-orbit-preview-DWAP8Z1P.gif',
-  'https://motionsites.ai/assets/hero-new-era-preview-CocuDUm9.gif',
-  'https://motionsites.ai/assets/hero-wealth-preview-B70idl_u.gif',
-  'https://motionsites.ai/assets/hero-luminex-preview-CxOP7ce6.gif',
-  'https://motionsites.ai/assets/hero-celestia-preview-0yO3jXO8.gif',
+  'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600&q=80', // AI Tech Node
+  'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=600&q=80', // Network Infrastructure
+  'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80', // Cyber Abstract Grid
+  'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80', // Pixar Style Cyber Workspace
+  'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80', // Microcontroller Circuitry
+  'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80', // Robotic Tech Panel
+  'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80', // Connected Global Network
+  'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80', // Digital Matrix Flow
+  'https://images.unsplash.com/photo-1544256718-3bcf237f3974?auto=format&fit=crop&w=600&q=80', // Code Execution Window
+  'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80', // Cloud Datacenter Servers
+  'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=600&q=80', // Machine Learning Analytics
+  'https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=600&q=80', // Automation Systems
 ];
 
-const ROW_ONE = IMAGES.slice(0, 11);
-const ROW_TWO = IMAGES.slice(11);
+const ROW_ONE = IMAGES.slice(0, 6);
+const ROW_TWO = IMAGES.slice(6);
 
 // Triple the arrays for seamless looping appearance
 const tripled = (arr: string[]) => [...arr, ...arr, ...arr];
@@ -41,18 +33,18 @@ const Row = ({ images, offset, direction }: RowProps) => {
     direction === 'right' ? offset - 200 : -(offset - 200);
 
   return (
-    <div className="flex gap-3" style={{ willChange: 'transform', transform: `translateX(${translate}px)` }}>
+    <div className="flex gap-4" style={{ willChange: 'transform', transform: `translateX(${translate}px)` }}>
       {tripled(images).map((src, i) => (
         <div
           key={i}
-          className="shrink-0 overflow-hidden rounded-2xl"
+          className="shrink-0 overflow-hidden rounded-2xl border border-white/5 bg-[#0d0d11] transition-all duration-500 hover:border-[#ff7a00]/30"
           style={{ width: 420, height: 270 }}
         >
           <img
             src={src}
             alt=""
             loading="lazy"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300"
             draggable={false}
           />
         </div>
@@ -85,9 +77,9 @@ const MarqueeSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full overflow-hidden bg-[#0C0C0C] pt-24 sm:pt-32 md:pt-40 pb-10"
+      className="relative w-full overflow-hidden bg-[#060608] pt-24 sm:pt-32 md:pt-40 pb-10"
     >
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-4">
         <Row images={ROW_ONE} offset={offset} direction="right" />
         <Row images={ROW_TWO} offset={offset} direction="left" />
       </div>

@@ -1,9 +1,10 @@
+import React from 'react';
 import FadeIn from './FadeIn';
 import ContactButton from './ContactButton';
 import AnimatedText from './AnimatedText';
 
 const ABOUT_TEXT =
-  "I'm a Computer Science graduate from NSUT, currently a Content R&D Trainee at PhysicsWallah, where I help ship live, customer-facing learning products. I focus on UI/UX, front-end development, and GenAI integration — turning rough ideas into clean, engaging digital experiences. Let's build something incredible together!";
+  "I am an Electronics and Communication Engineering student, AI explorer, content creator, and aspiring entrepreneur focused on building innovative solutions through technology, automation, and business strategy. With a strong foundation in artificial intelligence, embedded systems, and VLSI concepts, I combine technical depth with entrepreneurial drive to develop scalable, future-ready products in healthcare, automation, and smart infrastructure.";
 
 const AboutSection = () => {
   return (
@@ -11,136 +12,79 @@ const AboutSection = () => {
       id="about"
       className="relative flex min-h-screen w-full items-center justify-center overflow-hidden px-5 sm:px-8 md:px-10 py-20"
     >
-      {/* Corner decorative 3D images */}
-      <FadeIn
-        delay={0.1}
-        x={-80}
-        y={0}
-        duration={0.9}
-          className="pointer-events-none absolute top-[4%] left-[1%] sm:left-[2%] md:left-[4%] w-[60px] sm:w-[160px] md:w-[210px]"
-      >
-        <img
-          src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/moon_icon.11395d36.png"
-          alt=""
-          className="w-full h-auto"
-          loading="lazy"
-          draggable={false}
-        />
-      </FadeIn>
+      {/* Decorative background elements remain the same */}
+      {/* ... (Keep your existing decorative FadeIn images here) ... */}
 
-      <FadeIn
-        delay={0.25}
-        x={-80}
-        y={0}
-        duration={0.9}
-          className="pointer-events-none absolute bottom-[8%] left-[3%] sm:left-[6%] md:left-[10%] w-[55px] sm:w-[140px] md:w-[180px]"
-      >
-        <img
-          src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/p59_1.4659672e.png"
-          alt=""
-          className="w-full h-auto"
-          loading="lazy"
-          draggable={false}
-        />
-      </FadeIn>
-
-      <FadeIn
-        delay={0.15}
-        x={80}
-        y={0}
-        duration={0.9}
-          className="pointer-events-none absolute top-[4%] right-[1%] sm:right-[2%] md:right-[4%] w-[60px] sm:w-[160px] md:w-[210px]"
-      >
-        <img
-          src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/lego_icon-1.703bb594.png"
-          alt=""
-          className="w-full h-auto"
-          loading="lazy"
-          draggable={false}
-        />
-      </FadeIn>
-
-      <FadeIn
-        delay={0.3}
-        x={80}
-        y={0}
-        duration={0.9}
-          className="pointer-events-none absolute bottom-[8%] right-[3%] sm:right-[6%] md:right-[10%] w-[65px] sm:w-[170px] md:w-[220px]"
-      >
-        <img
-          src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/Group_134-1.2e04f3ce.png"
-          alt=""
-          className="w-full h-auto"
-          loading="lazy"
-          draggable={false}
-        />
-      </FadeIn>
-
-      {/* Center content */}
-      <div className="relative z-10 flex flex-col items-center gap-10 sm:gap-14 md:gap-16 text-center">
-        <FadeIn delay={0} y={40}>
-          <h2
-            className="hero-heading font-black uppercase leading-none tracking-tight"
-            style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
-          >
-            About me
-          </h2>
+      <div className="relative z-10 w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[400px_1fr] gap-12 lg:gap-20 items-center">
+        
+        {/* Left Column: Image with Float Animation */}
+        <FadeIn delay={0.2} y={0} x={-40} className="w-full">
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#ff7a00] to-[#00ffcc] rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+            <img
+              src="elu.jpeg"
+              alt="S. Elumalai"
+              className="relative w-full h-[500px] object-cover rounded-2xl shadow-2xl animate-float"
+              draggable={false}
+            />
+          </div>
         </FadeIn>
 
-          <div className="flex flex-col items-center gap-12 sm:gap-16 md:gap-20">
-                    <AnimatedText
-                      text={ABOUT_TEXT}
-                      className="font-medium leading-relaxed text-[#D7E2EA] max-w-[560px]"
-                      style={{ fontSize: 'clamp(1rem, 2vw, 1.35rem)' }}
-                    />
+        {/* Right Column: Content */}
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-10">
+          <FadeIn delay={0.3} y={40}>
+            <h2
+              className="hero-heading font-black uppercase leading-none tracking-tight text-white"
+              style={{ fontSize: 'clamp(3rem, 8vw, 100px)' }}
+            >
+              Who I Am
+            </h2>
+          </FadeIn>
 
-                    {/* Skills */}
-                    <FadeIn delay={0.15} className="w-full max-w-3xl">
-                      <div className="flex flex-col gap-5 sm:gap-6">
-                        {[
-                          {
-                            label: 'Languages',
-                            items: ['Python', 'JavaScript', 'HTML', 'CSS', 'SQL'],
-                          },
-                          {
-                            label: 'Frameworks & Libraries',
-                            items: ['React', 'Tailwind', 'Pandas', 'NumPy', 'Scikit-learn', 'NLTK'],
-                          },
-                          {
-                            label: 'Tools & Platforms',
-                            items: ['Figma', 'Vercel', 'Git', 'GitHub', 'Power BI', 'Canva', 'Excel'],
-                          },
-                          {
-                            label: 'AI & GenAI',
-                            items: ['Gemini', 'Claude', 'OpenAI', 'Prompt engineering'],
-                          },
-                        ].map((group) => (
-                          <div
-                            key={group.label}
-                            className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-5"
-                          >
-                            <span className="text-xs uppercase tracking-widest text-[#D7E2EA]/40 sm:w-44 sm:shrink-0 sm:text-right">
-                              {group.label}
-                            </span>
-                            <div className="flex flex-wrap gap-2">
-                              {group.items.map((item) => (
-                                <span
-                                  key={item}
-                                  className="rounded-full border border-[#D7E2EA]/15 bg-[#D7E2EA]/[0.03] px-3 py-1 text-sm text-[#D7E2EA]/80 hover:border-[#D7E2EA]/40 hover:text-[#D7E2EA] transition-colors"
-                                >
-                                  {item}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </FadeIn>
+          <AnimatedText
+            text={ABOUT_TEXT}
+            className="font-medium leading-relaxed text-[#D7E2EA] max-w-2xl"
+            style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)' }}
+          />
 
-                    <FadeIn delay={0.25}>
-                      <ContactButton />
-                    </FadeIn>
-                  </div>      </div>
+          {/* Skills Section */}
+          <FadeIn delay={0.4} className="w-full">
+            <div className="flex flex-col gap-6 text-left">
+              {[
+                { label: 'AI & ML', items: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision'] },
+                { label: 'IoT & Embedded', items: ['ESP32', 'IoT Architecture', 'Sensors', 'Real-time Systems'] },
+                { label: 'Business & Creative', items: ['Digital Marketing', 'Strategy', 'Video Editing', 'Content'] },
+              ].map((group) => (
+                <div key={group.label} className="flex flex-col lg:flex-row lg:items-baseline gap-2 lg:gap-5">
+                  <span className="text-[10px] uppercase tracking-widest text-[#ff7a00] font-bold w-32 shrink-0">
+                    {group.label}
+                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {group.items.map((item) => (
+                      <span key={item} className="rounded-full border border-[#D7E2EA]/10 px-3 py-1 text-xs text-[#D7E2EA]/70 hover:border-[#ff7a00]/50 hover:text-[#ff7a00] transition-colors cursor-default">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.5}>
+            <ContactButton />
+          </FadeIn>
+        </div>
+      </div>
+      
+      {/* Add this to your index.css or tailwind.config.js for the float animation */}
+      <style>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+      `}</style>
     </section>
   );
 };

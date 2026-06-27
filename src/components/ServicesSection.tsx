@@ -1,36 +1,47 @@
 import FadeIn from './FadeIn';
 
-
 const SERVICES = [
   {
     number: '01',
-    title: 'UI/UX Design',
+    title: 'AI & ML Engineering',
     description:
-      'Designing clean, intuitive interfaces that prioritise user flow, hierarchy, and visual clarity — turning ideas into experiences people actually enjoy using.',
+      'Designing intelligent systems, training deep learning architectures, building natural language processing models, and deploying predictive analytics pipelines to solve real-world problems.',
   },
   {
     number: '02',
-    title: 'Front-end Development',
+    title: 'Embedded & IoT',
     description:
-      'Building responsive, performant web apps with React, TypeScript, and Tailwind — pixel-perfect on every screen, deployed seamlessly on Vercel.',
+      'Developing smart hardware prototypes and custom IoT architectures using microcontrollers like the ESP32, integrating sensor components, and scripting real-time automation logic.',
   },
   {
     number: '03',
-    title: 'GenAI Integration',
+    title: 'Cybersecurity',
     description:
-      'Wiring large language models into real products via Gemini, Claude, and OpenAI APIs — from resume reviewers to AI tutors and beyond.',
+      'Securing interconnected infrastructures, implementing threat mitigation protocols, hardening digital assets, and ensuring robust protection across network nodes.',
   },
   {
     number: '04',
-    title: 'Prompt Engineering & LLM Automation',
+    title: 'Entrepreneurship',
     description:
-      'Crafting reliable prompts and automation flows that turn LLMs into production-grade tools for content, analysis, and decision support.',
+      'Building scalable digital ventures, refining minimal viable products (MVPs), and engineering business models at the crossroads of hardware innovation and modern web technology.',
   },
   {
     number: '05',
-    title: 'Data Analysis & Visualization',
+    title: 'Networking',
     description:
-      'Exploring datasets with Python (Pandas, NumPy, Seaborn) and Power BI — turning raw numbers into clear insights and dashboards stakeholders can act on.',
+      'Designing robust communication topologies, structural industrial networks, wireless data routing configurations, and managing low-latency connectivity environments.',
+  },
+  {
+    number: '06',
+    title: 'Digital Marketing',
+    description:
+      'Deploying strategic full-funnel content distribution, brand position building, conversion analytics, and cross-platform growth strategies to build a solid audience footprint.',
+  },
+  {
+    number: '07',
+    title: 'Content Creator',
+    description:
+      'Educational digital storytelling and video production across YouTube, Instagram, and LinkedIn channels focusing on engineering domains, computing technology, and interactive tools.',
   },
 ];
 
@@ -62,7 +73,7 @@ const ServicesSection = () => {
               }}
             >
               <div
-                className="shrink-0 font-black text-[#0C0C0C] leading-none"
+                className="shrink-0 font-black text-[#0C0C0C] leading-none transition-colors duration-300 hover:text-[#ff7a00]"
                 style={{ fontSize: 'clamp(3rem, 10vw, 140px)' }}
               >
                 {service.number}
@@ -74,7 +85,7 @@ const ServicesSection = () => {
                   style={{ fontSize: 'clamp(1rem, 2.2vw, 2.1rem)' }}
                 >
                   {service.title}
-                  <span className="absolute left-0 -bottom-1 h-px w-0 bg-[#0C0C0C]/60 transition-all duration-500 group-hover:w-full" />
+                  <span className="absolute left-0 -bottom-1 h-px w-0 bg-[#ff7a00] transition-all duration-500 group-hover:w-full" />
                 </h3>
                 <p
                   className="font-light leading-relaxed text-[#0C0C0C] max-w-2xl"
