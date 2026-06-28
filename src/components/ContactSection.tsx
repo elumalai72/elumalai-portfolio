@@ -1,4 +1,4 @@
-import { Mail, MessageCircle, Linkedin, Github, ArrowUpRight } from 'lucide-react';
+import { Mail, MessageCircle, Linkedin, Github, ArrowUpRight, Instagram, Youtube } from 'lucide-react';
 import FadeIn from './FadeIn';
 
 interface ContactMethod {
@@ -23,15 +23,28 @@ const CONTACT_METHODS: ContactMethod[] = [
     href: 'https://wa.me/7032973152',
   },
   {
+    icon: Instagram,
+    label: 'Instagram',
+    value: 'Follow me',
+    // wa.me requires digits only — no +, no spaces, no hyphens
+    href: 'https://www.instagram.com/lafluencee?igsh=ZjEyeWI3bXV4dGRv',
+  },
+  {
     icon: Linkedin,
     label: 'LinkedIn',
     value: 'Connect',
     href: 'https://www.linkedin.com/in/s-elumalai-63bb392a3?utm_source=share_via&utm_content=profile&utm_medium=member_android',
   },
   {
+    icon: Youtube,
+    label: 'YouTube',
+    value: 'Subscribe',
+    href: 'https://youtube.com/@ft.elumalai?si=81btxAUxByMTDDwA',
+  },
+  {
     icon: Github,
     label: 'GitHub',
-    value: 'View Code',
+    value: 'Projects',
     href: 'https://github.com/elumalai72',
   },
 ];
@@ -66,7 +79,6 @@ const ContactSection = () => {
         {CONTACT_METHODS.map((method, i) => {
           const Icon = method.icon;
           const isExternal = method.href.startsWith('http');
-
           return (
             <FadeIn key={method.label} delay={i * 0.1} y={30}>
               <a
